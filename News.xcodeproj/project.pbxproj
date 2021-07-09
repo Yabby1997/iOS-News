@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D8DE7162698453600366525 /* ResultState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D8DE7152698453600366525 /* ResultState.swift */; };
 		1DF0FB592697428C00ADE128 /* NewsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0FB582697428C00ADE128 /* NewsApp.swift */; };
 		1DF0FB5B2697428C00ADE128 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DF0FB5A2697428C00ADE128 /* HomeView.swift */; };
 		1DF0FB5D2697428D00ADE128 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1DF0FB5C2697428D00ADE128 /* Assets.xcassets */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1D8DE7152698453600366525 /* ResultState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultState.swift; sourceTree = "<group>"; };
 		1DF0FB552697428C00ADE128 /* News.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = News.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DF0FB582697428C00ADE128 /* NewsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsApp.swift; sourceTree = "<group>"; };
 		1DF0FB5A2697428C00ADE128 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -41,6 +43,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D8DE7142698452E00366525 /* States */ = {
+			isa = PBXGroup;
+			children = (
+				1D8DE7152698453600366525 /* ResultState.swift */,
+			);
+			path = States;
+			sourceTree = "<group>";
+		};
 		1DF0FB4C2697428C00ADE128 = {
 			isa = PBXGroup;
 			children = (
@@ -60,6 +70,7 @@
 		1DF0FB572697428C00ADE128 /* News */ = {
 			isa = PBXGroup;
 			children = (
+				1D8DE7142698452E00366525 /* States */,
 				1DF0FB742698017A00ADE128 /* Service */,
 				1DF0FB6E2697FFEE00ADE128 /* Error */,
 				1DF0FB6B2697FE6A00ADE128 /* Endpoint */,
@@ -190,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D8DE7162698453600366525 /* ResultState.swift in Sources */,
 				1DF0FB762698018400ADE128 /* NewsService.swift in Sources */,
 				1DF0FB5B2697428C00ADE128 /* HomeView.swift in Sources */,
 				1DF0FB592697428C00ADE128 /* NewsApp.swift in Sources */,
