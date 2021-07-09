@@ -19,7 +19,7 @@ struct Article: Codable, Identifiable {
     let title: String
     let description: String
     let image: String
-    let date: String
+    let date: Date
     
     enum CodingKeys: String, CodingKey {
         case author, url, source, title, description, image, date
