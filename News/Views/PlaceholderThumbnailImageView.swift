@@ -9,12 +9,16 @@ import SwiftUI
 
 struct PlaceholderThumbnailImageView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName: "photo.fill")
+            .foregroundColor(.white)
+            .background(Color.gray)
+            .frame(width: 100, height: 100)
     }
 }
 
 struct PlaceholderThumbnailImageView_Previews: PreviewProvider {
     static var previews: some View {
         PlaceholderThumbnailImageView()
+            .previewLayout(.sizeThatFits)
     }
 }

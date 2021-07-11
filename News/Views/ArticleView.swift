@@ -6,15 +6,42 @@
 //
 
 import SwiftUI
+import URLImage
 
 struct ArticleView: View {
+    let article: Article
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            if let imageUrl = article.image, let url = URL(string: imageUrl) {
+                URLImage(url, identifier: article.id.uuidString, failure: { _, _ in
+                    PlaceholderThumbnailImageView()
+                }) { image in
+                    image
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
+                .frame(width: 100, height: 100)
+                .cornerRadius(10)
+            } else {
+                PlaceholderThumbnailImageView()
+                    .frame(width: 100, height: 100)
+                    .cornerRadius(10)
+            }
+            VStack(alignment: .leading, spacing: 4, content: {
+                Text(article.title ?? "N/A")
+                    .font(.system(size: 18, weight: .semibold))
+                Text(article.source ?? "N/A")
+                    .foregroundColor(.gray)
+                    .font(.footnote)
+            })
+        }
     }
 }
 
 struct ArticleView_Previews: PreviewProvider {
     static var previews: some View {
-        ArticleView()
+        ArticleView(article: Article.dummyData)
+            .previewLayout(.sizeThatFits)
     }
 }
