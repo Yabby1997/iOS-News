@@ -34,6 +34,15 @@ struct ArticleView: View {
                 Text(article.source ?? "N/A")
                     .foregroundColor(.gray)
                     .font(.footnote)
+                if let date = article.date {
+                    HStack(spacing: 4) {
+                        Text(date, style: .date)
+                            .fontWeight(.bold)
+                        Text(date, style: .time)
+                    }
+                    .foregroundColor(.gray)
+                    .font(.system(size: 12))
+                }
             })
         }
     }
