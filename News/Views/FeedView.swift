@@ -17,13 +17,11 @@ struct FeedView: View {
         NavigationView {
             Group {
                 switch viewModel.state {
-                case .loading:
-                    ProgressView()
                 case .failed(let error):
                     ErrorView(error: error, retryHandler: viewModel.getArticles)
-                case .success(let articles):
-                    List(articles) { item in
-                        ArticleView(article: item)
+                default:
+                    List(viewModel.isLoading ? Article.dummyData : viewModel.articles) { item in
+                        ArticleView(isLoading: viewModel.isLoading, article: item)
                             .onTapGesture {
                                 openURLwithWebBrowser(url: item.url)
                             }
